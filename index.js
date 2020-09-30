@@ -4,6 +4,7 @@ const client = require('twilio')(accountSid, authToken);
 
 exports.handler = async (data) => {
   console.log(`Sending SMS to ${data.to}`);
+  console.log('Test');
   const msg = await client.messages
   .create({
      body: data.body,
